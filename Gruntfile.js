@@ -69,21 +69,8 @@ module.exports = function( grunt ) {
 			},
 			src: {
 				files: {
-					"src/sizzle/dist": "sizzle/dist",
-					"src/sizzle/test/data": "sizzle/test/data",
-					"src/sizzle/test/unit": "sizzle/test/unit",
-					"src/sizzle/test/index.html": "sizzle/test/index.html",
-					"src/sizzle/test/jquery.js": "sizzle/test/jquery.js"
-				}
-			},
-			tests: {
-				options: {
-					destPrefix: "test/libs"
-				},
-				files: {
-					"qunit": "qunit/qunit",
-					"require.js": "requirejs/require.js",
-					"sinon/fake_timers.js": "sinon/lib/sinon/util/fake_timers.js"
+					"src/underscore/underscore.js": "underscore/underscore.js",
+					"src/underscore/underscore.min.js": "underscore/underscore-min.js",
 				}
 			}
 		},

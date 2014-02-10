@@ -1,0 +1,25 @@
+{
+  "name": "js-scaffold",
+  "version": "0.1.0",
+  "ignore": [
+    "**/.*",
+    "build",
+    "speed",
+    "test",
+    "*.md",
+    "AUTHORS.txt",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json"
+  ],
+  "dependencies": {
+    "underscore": "1.5.2"
+  },
+  "devDependencies": {
+  },
+  "keywords": [
+    "js-scaffold",
+    "javascript",
+    "library"
+  ]
+}

@@ -1,8 +1,9 @@
 define([
 	"./core",
+	"./foo",
 	"./foo/tostring",
 	"./exports/amd",
 	"./exports/global"
-], function(xxx) {
+], function(xxx, _) {
 	return xxx;
 });

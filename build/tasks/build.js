@@ -27,7 +27,7 @@ module.exports = function( grunt ) {
 				endFile: "src/outro.js"
 			},
 			paths: {
-				//sizzle: "sizzle/dist/sizzle"
+				underscore: "underscore/underscore"
 			},
 			rawText: {},
 			onBuildWrite: convert
@@ -44,6 +44,11 @@ module.exports = function( grunt ) {
 	 */
 	function convert( name, path, contents ) {
 		var amdName;
+
+		if (!/define/.test(contents)) {
+			throw new Error('No define find in ' + path);
+		}
+
 		// Convert var modules
 		if ( /.\/var\//.test( path ) ) {
 			contents = contents
@@ -60,11 +65,11 @@ module.exports = function( grunt ) {
 				.replace(/\'exports\/amd\'/,"\"exports\/amd\"");
 
 		/*
-		// Sizzle treatment or you can define someother library
-		} else if ( /^sizzle$/.test( name ) ) {
-			contents = "var Sizzle =\n" + contents
-				// Remove EXPOSE lines from Sizzle
-				.replace( /\/\/\s*EXPOSE[\w\W]*\/\/\s*EXPOSE/, "return Sizzle;" );
+		// underscore treatment or you can define someother library
+		} else if ( /^underscore$/.test( name ) ) {
+			contents = "\tvar _ =\n" + contents
+				// Remove EXPOSE lines from underscore
+				.replace( /\}\).call\(this\)\;\s+/, "\treturn _;\n}).call(this);" );
 		*/
 		} else {
 
