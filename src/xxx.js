@@ -4,6 +4,6 @@ define([
 	"./foo/tostring",
 	"./exports/amd",
 	"./exports/global"
-], function(xxx, _) {
+], function(xxx) {
 	return xxx;
 });

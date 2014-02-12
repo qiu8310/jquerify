@@ -69,8 +69,8 @@ module.exports = function( grunt ) {
 			},
 			src: {
 				files: {
-					"src/underscore/underscore.js": "underscore/underscore.js",
-					"src/underscore/underscore.min.js": "underscore/underscore-min.js",
+					//"src/underscore/underscore.js": "underscore/underscore.js",
+					//"src/underscore/underscore.min.js": "underscore/underscore-min.js",
 				}
 			}
 		},

@@ -46,7 +46,7 @@ module.exports = function( grunt ) {
 		var amdName;
 
 		if (!/define/.test(contents)) {
-			throw new Error('No define find in ' + path);
+			throw new Error("No define find in " + path);
 		}
 
 		// Convert var modules
