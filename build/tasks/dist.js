@@ -40,7 +40,8 @@ module.exports = function( grunt ) {
 			}
 
 			// Ensure only ASCII chars so script tags don't need a charset attribute
-			if ( text.length !== Buffer.byteLength( text, "utf8" ) ) {
+			// 中文也会被禁用了，取消这个检查
+			if ( false && text.length !== Buffer.byteLength( text, "utf8" ) ) {
 				grunt.log.writeln( filename + ": Non-ASCII characters detected:" );
 				for ( i = 0; i < text.length; i++ ) {
 					c = text.charCodeAt( i );

@@ -1,7 +1,7 @@
 /*!
  * xxx JavaScript Library v0.0.0
  *
- * Date: 2014-02-12T08:03Z
+ * Date: 2014-02-16T04:52Z
  */
 
 (function( global, factory ) {
@@ -20,39 +20,54 @@
 	// Support: Firefox 18+
 	//
 
-	var arr = [];
-
-	var slice = arr.slice;
-
-	var concat = arr.concat;
-
-	var push = arr.push;
-
-	var indexOf = arr.indexOf;
+	var author = "Zhonglei Qiu";
 
 	var class2type = {};
 
 	var toString = class2type.toString;
 
-	var hasOwn = class2type.hasOwnProperty;
-
-	var trim = "".trim;
-
-	var support = {};
 
 
+	var xxx = function(name) {
+		return new xxx.fn.init(name);
+	};
 
-	function xxx() {
-		console.log("TODO");
+	xxx.fn = xxx.prototype = {
+		constructor : xxx,
+		init : function(name) {
+			this.name = toString.call(name);
+			return this;
+		},
+		getName : function() {
+			return this.name;
+		},
+		getAuthor : function() {
+			return author;
+		}
+	};
+	xxx.fn.init.prototype = xxx.fn;  // 这是最重要的一行
+	var rQuery = /([^&=]+)=([^&]*)/g;
+
+
+
+	function query() {
+		var params = {};
+		window.location.search.slice(1).replace(rQuery, function(_, key, val) {
+			if (!params[key]) {
+				params[key] = decodeURIComponent(val);
+			}
+		});
+		return query;
 	}
 
 
-	var obj = {};
+	xxx.foo = query;
 
 
-	xxx.tostring = function(o) {
-		obj.prototype.toString.call(o);
+	xxx.fn.bar = function() {
+		return "bar";
 	};
+
 
 	
 
