@@ -69,7 +69,18 @@ module.exports = function( grunt ) {
 			},
 			src: {
 				files: {
+					// libs that xxx need use
 					//"src/underscore/underscore.js": "underscore/underscore.js"
+				}
+			},
+			tests: {
+				options: {
+					destPrefix: "test/libs"
+				},
+				files: {
+					"qunit": "qunit/qunit",
+					"require.js": "requirejs/require.js",
+					"sinon/fake_timers.js": "sinon/lib/sinon/util/fake_timers.js"
 				}
 			}
 		},

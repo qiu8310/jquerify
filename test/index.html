@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>xxx Unit Test</title>
+	<link rel="stylesheet" href="./libs/qunit/qunit.css">
+	<script src="./libs/qunit/qunit.js"></script>
+	<script src="../dist/xxx.js"></script>
+	<script src="util/test.js"></script>
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+
+
+	<script type="text/javascript">
+	console.log(1);
+	test( "a basic test example", function() {
+		var value = "hello";
+		equal( value, "hello", "We expect value to be hello" );
+	});
+	console.log(3);
+	</script>
+
+</body>
+</html>
