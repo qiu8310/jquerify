@@ -1,7 +1,7 @@
 define([
 	"./core",
 	"./foo",
-	"./foo/tostring",
+	"./bar",
 	"./exports/amd",
 	"./exports/global"
 ], function(xxx) {

@@ -1,5 +1,10 @@
 define([
-	"bar"
-], function(_) {
-	return _;
+	"./core",
+	"./foo/query"
+], function(xxx, query) {
+
+	xxx.foo = query;
+
+	return xxx;
+
 });
