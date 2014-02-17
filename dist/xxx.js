@@ -1,7 +1,7 @@
 /*!
  * xxx JavaScript Library v0.0.0
  *
- * Date: 2014-02-16T12:38Z
+ * Date: 2014-02-17T07:03Z
  */
 
 (function( global, factory ) {
@@ -50,14 +50,14 @@
 
 
 
-	function query() {
+	function query(search) {
 		var params = {};
-		window.location.search.slice(1).replace(rQuery, function(_, key, val) {
+		search.replace(rQuery, function(_, key, val) {
 			if (!params[key]) {
 				params[key] = decodeURIComponent(val);
 			}
 		});
-		return query;
+		return params;
 	}
 
 

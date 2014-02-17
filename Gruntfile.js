@@ -59,13 +59,13 @@ module.exports = function( grunt ) {
 		},
 		jscs: {
 			src: "src/**/*.js",
-			test: "test/**/*.js",
+			test: [ "test/unit/**/*.js" ],
 			gruntfile: "Gruntfile.js",
 			tasks: "build/tasks/*.js"
 		},
 		bowercopy: {
 			options: {
-				clean: true
+				clean: false
 			},
 			src: {
 				files: {
@@ -80,6 +80,7 @@ module.exports = function( grunt ) {
 				files: {
 					"qunit": "qunit/qunit",
 					"require.js": "requirejs/require.js",
+					"blanket": "blanket/dist/qunit",
 					"sinon/fake_timers.js": "sinon/lib/sinon/util/fake_timers.js"
 				}
 			}

@@ -17,6 +17,7 @@
   "devDependencies": {
     "requirejs": "2.1.10",
     "qunit": "1.14.0",
+    "blanket": "1.1.5",
     "sinon": "1.8.1"
   },
   "keywords": [
