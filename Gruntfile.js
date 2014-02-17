@@ -103,7 +103,7 @@ module.exports = function( grunt ) {
 			}
 		},
 		testswarm: {
-			tests: "ajax attributes callbacks core css data deferred dimensions effects event manipulation offset queue selector serialize support traversing Sizzle".split( " " )
+			tests: "core foo bar".split( " " )
 		},
 		watch: {
 			files: [ "<%= jshint.all.src %>" ],
