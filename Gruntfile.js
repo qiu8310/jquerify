@@ -69,8 +69,18 @@ module.exports = function( grunt ) {
 			},
 			src: {
 				files: {
-					//"src/underscore/underscore.js": "underscore/underscore.js",
-					//"src/underscore/underscore.min.js": "underscore/underscore-min.js",
+					// libs that xxx need use
+					//"src/underscore/underscore.js": "underscore/underscore.js"
+				}
+			},
+			tests: {
+				options: {
+					destPrefix: "test/libs"
+				},
+				files: {
+					"qunit": "qunit/qunit",
+					"require.js": "requirejs/require.js",
+					"sinon/fake_timers.js": "sinon/lib/sinon/util/fake_timers.js"
 				}
 			}
 		},
@@ -85,6 +95,10 @@ module.exports = function( grunt ) {
 
 			bower: {
 				src: [ "bower.json" ]
+			},
+
+			testswarm: {
+				src: [ "testswarm" ]
 			}
 		},
 		testswarm: {
