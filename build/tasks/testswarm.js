@@ -39,7 +39,7 @@ module.exports = function( grunt ) {
 				name: jobName,
 				runs: runs,
 				runMax: config.runMax,
-				browserSets: [ "example" ]
+				browserSets: [ "Mobile-Browers", "PC-Browers" ]
 			}, function( err, passed ) {
 				if ( err ) {
 					grunt.log.error( err );
