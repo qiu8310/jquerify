@@ -8,7 +8,7 @@ module.exports = function( grunt ) {
 			runs = {},
 			done = this.async(),
 			pull = /PR-(\d+)/.exec( commit ),
-			config = grunt.file.readJSON( "testswarm.json" ).scaffold,
+			config = grunt.file.readJSON( "build/testswarm.json" ).scaffold,
 			tests = grunt.config([ this.name, "tests" ]);
 
 		if ( pull ) {

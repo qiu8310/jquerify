@@ -1,9 +1,0 @@
-{
-	"scaffold" : {
-		"testUrl" : "http://jq.com",
-		"swarmUrl" : "http://localhost/testswarm/",
-		"authUsername" : "jsscaffold",
-		"authToken" : "b9e62ad625a307b7777ec296703778cf21227449",
-		"runMax" : 3
-	}
-}
