@@ -1,5 +1,6 @@
 .project
 .settings
+.idea
 *~
 *.diff
 *.patch
@@ -8,7 +9,10 @@
 .bower.json
 .sizecache.json
 
+/test/reports
+
 /build/testswarm.json
+/external/*
 
 
 /bower_components

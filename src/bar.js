@@ -1,9 +1,9 @@
 define([
-	"./core"
-], function(xxx) {
+	'./core'
+], function(jquerify) {
 
-	xxx.fn.bar = function() {
-		return "bar";
+  jquerify.fn.bar = function() {
+		return 'I\'m the bar';
 	};
 
 });

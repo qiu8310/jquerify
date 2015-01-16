@@ -1,3 +1,3 @@
 define(function() {
-	return 'Zhonglei Qiu';
+	return /^foo$/i;
 });

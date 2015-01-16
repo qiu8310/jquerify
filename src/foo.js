@@ -1,10 +1,10 @@
 define([
-	"./core",
-	"./foo/query"
-], function(xxx, query) {
+	'./core',
+	'./foo/isFoo'
+], function(jquerify, isFoo) {
 
-	xxx.foo = query;
+  jquerify.isFoo = isFoo;
 
-	return xxx;
+	return jquerify;
 
 });

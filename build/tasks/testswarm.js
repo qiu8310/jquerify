@@ -1,27 +1,28 @@
 module.exports = function( grunt ) {
 
-	"use strict";
+	'use strict';
 
-	grunt.registerTask( "testswarm", function( commit ) {
+	grunt.registerTask( 'testswarm', function( commit ) {
 		var jobName,
-			testswarm = require( "testswarm" ),
+			testswarm = require( 'testswarm' ),
 			runs = {},
 			done = this.async(),
 			pull = /PR-(\d+)/.exec( commit ),
-			config = grunt.file.readJSON( "build/testswarm.json" ).scaffold,
-			tests = grunt.config([ this.name, "tests" ]);
+			config = grunt.file.readJSON( 'build/testswarm.json' ),
+			tests = grunt.config([ this.name, 'tests' ]),
+      homepage = grunt.config('pkg.homepage');
 
 		if ( pull ) {
-			jobName = "Pull <a href='https://github.com/qiu8310/js-scaffold/pull/" +
-				pull[ 1 ] + "'>#" + pull[ 1 ] + "</a>";
+			jobName = 'Pull <a href"=' + homepage + '/pull/' +
+				pull[ 1 ] + '">#' + pull[ 1 ] + '</a>';
 		} else {
-			jobName = "Commit <a href='https://github.com/qiu8310/js-scaffold/commit/" +
-				commit + "'>" + commit.substr( 0, 10 ) + "</a>";
+			jobName = 'Commit <a href"=' + homepage + '/js-scaffold/commit/' +
+				commit + '">' + commit.substr( 0, 10 ) + '</a>';
 		}
 
 		tests.forEach(function( test ) {
-			// runs[ test ] = config.testUrl + commit + "/test/index.html?module=" + test;
-			runs[ test ] = config.testUrl + "/test/index.html?module=" + test;
+			// runs[ test ] = config.testUrl + commit + '/test/index.html?module=' + test;
+			runs[ test ] = config.testUrl + '/test/index.html?module=' + test;
 		});
 
 		testswarm.createClient( {
@@ -39,7 +40,7 @@ module.exports = function( grunt ) {
 				name: jobName,
 				runs: runs,
 				runMax: config.runMax,
-				browserSets: [ "Mobile-Browers", "PC-Browers" ]
+				browserSets: config.browserSets
 			}, function( err, passed ) {
 				if ( err ) {
 					grunt.log.error( err );
