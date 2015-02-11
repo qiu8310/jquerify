@@ -2,17 +2,16 @@
   "name": "jquerify",
   "version": "0.0.1",
   "description": "用 jQuery 源码管理工具改编，可以让你开发像 jQuery 一样的库，助你写出伟大的代码",
-  "main": "index.js",
   "author": "Zhonglei Qiu",
   "repository": {
     "type": "git",
-    "url": "http://github.com/qiu8310/jim"
+    "url": "http://github.com/qiu8310/jquerify"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/qiu8310/jim/issues"
+    "url": "https://github.com/qiu8310/jquerify/issues"
   },
-  "homepage": "https://github.com/qiu8310/js-scaffold",
+  "homepage": "https://github.com/qiu8310/jquerify",
   "scripts": {
     "test": "grunt test"
   },

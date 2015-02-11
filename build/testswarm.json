@@ -1,0 +1,8 @@
+{
+  "testUrl" : "http://localhost/jquerify",
+  "swarmUrl" : "http://fcbst.sinaapp.com/testswarm/",
+  "browserSets": [ "Mobile-Browers", "PC-Browers" ],
+  "authUsername" : "jquerify",
+  "authToken" : "f34129ff03fa8cb6b667ace242483d7681483ae0",
+  "runMax" : 3
+}
